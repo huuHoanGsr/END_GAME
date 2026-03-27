@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: d14d9ec5abaf24743afa823c8bec68b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9128935571069209044
+    second: logo-fpt-polytechnic_0
+  - first:
+      213: 3874859309569048420
+    second: logo-fpt-polytechnic_1
+  - first:
+      213: 6919576473741033629
+    second: logo-fpt-polytechnic_2
+  - first:
+      213: -1066444505149434109
+    second: logo-fpt-polytechnic_3
+  - first:
+      213: -1356938204107659014
+    second: logo-fpt-polytechnic_4
+  - first:
+      213: 4823133532800185135
+    second: logo-fpt-polytechnic_5
+  - first:
+      213: 8999072231185493052
+    second: logo-fpt-polytechnic_6
+  - first:
+      213: -5954346147555800288
+    second: logo-fpt-polytechnic_7
+  - first:
+      213: 5658428503871883413
+    second: logo-fpt-polytechnic_8
+  - first:
+      213: 619264427017729583
+    second: logo-fpt-polytechnic_9
+  - first:
+      213: -6359026870879312072
+    second: logo-fpt-polytechnic_10
+  - first:
+      213: -4226283426536964668
+    second: logo-fpt-polytechnic_11
+  - first:
+      213: -1539448128832371650
+    second: logo-fpt-polytechnic_12
+  - first:
+      213: -1871974556536411777
+    second: logo-fpt-polytechnic_13
+  - first:
+      213: 6536388824514677963
+    second: logo-fpt-polytechnic_14
+  - first:
+      213: -6708641199375138097
+    second: logo-fpt-polytechnic_15
+  - first:
+      213: -3306353343224246199
+    second: logo-fpt-polytechnic_16
+  - first:
+      213: -7671252491010308688
+    second: logo-fpt-polytechnic_17
+  - first:
+      213: 6617354239563690530
+    second: logo-fpt-polytechnic_18
+  - first:
+      213: -6322753782444565824
+    second: logo-fpt-polytechnic_19
+  - first:
+      213: -3932347087350011331
+    second: logo-fpt-polytechnic_20
+  - first:
+      213: 1956922267978453577
+    second: logo-fpt-polytechnic_21
+  - first:
+      213: -1550556792122800577
+    second: logo-fpt-polytechnic_22
+  - first:
+      213: 1461818587755514827
+    second: logo-fpt-polytechnic_23
+  - first:
+      213: 6419943401239543461
+    second: logo-fpt-polytechnic_24
+  - first:
+      213: 4366412006970332746
+    second: logo-fpt-polytechnic_25
+  - first:
+      213: 4030120595643013725
+    second: logo-fpt-polytechnic_26
+  - first:
+      213: 7294342918068208966
+    second: logo-fpt-polytechnic_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_0
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 220
+        width: 151
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d90203e88e70be70800000000000000
+      internalID: 9128935571069209044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 183
+        width: 168
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f7a7d130446c530800000000000000
+      internalID: 3874859309569048420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 219
+        width: 151
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d900c713426470060800000000000000
+      internalID: 6919576473741033629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 263
+        width: 37
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30796e17f5a3331f0800000000000000
+      internalID: -1066444505149434109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_4
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 262
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8a10a84ef2b2de0800000000000000
+      internalID: -1356938204107659014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_5
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 262
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2374ded4663fe240800000000000000
+      internalID: 4823133532800185135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_6
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 320
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ca4efd38023ec70800000000000000
+      internalID: 8999072231185493052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 262
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b883de9b9ed5da0800000000000000
+      internalID: -5954346147555800288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_8
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 262
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5988a30aeb6c68e40800000000000000
+      internalID: 5658428503871883413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_9
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 262
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f267d6227b1189800800000000000000
+      internalID: 619264427017729583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_10
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 263
+        width: 13
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8372314a0c230c7a0800000000000000
+      internalID: -6359026870879312072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_11
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 262
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdb4298d993955c0800000000000000
+      internalID: -4226283426536964668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_12
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 263
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e348eca4518c2aae0800000000000000
+      internalID: -1539448128832371650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_13
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 220
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79e3191f096506e0800000000000000
+      internalID: -1871974556536411777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccc70f210be5ba50800000000000000
+      internalID: 6536388824514677963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 80
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2c1b18f5e16e2a0800000000000000
+      internalID: -6708641199375138097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_16
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 80
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9409133f6297d12d0800000000000000
+      internalID: -3306353343224246199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_17
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 0
+        width: 81
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b50003e08c3a8590800000000000000
+      internalID: -7671252491010308688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_18
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 101
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2227e12ee9095db50800000000000000
+      internalID: 6617354239563690530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_19
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 80
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca522b2fe01148a0800000000000000
+      internalID: -6322753782444565824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_20
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 94
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ae5f4982f7d69c0800000000000000
+      internalID: -3932347087350011331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_21
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 79
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94258eb3f62682b10800000000000000
+      internalID: 1956922267978453577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_22
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 84
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36837110d05b7ae0800000000000000
+      internalID: -1550556792122800577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_23
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb0b31b24c694410800000000000000
+      internalID: 1461818587755514827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_24
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aefef45288381950800000000000000
+      internalID: 6419943401239543461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_25
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 0
+        width: 97
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46977a069c989c30800000000000000
+      internalID: 4366412006970332746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_26
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 0
+        width: 46
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a9949445ddde730800000000000000
+      internalID: 4030120595643013725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-fpt-polytechnic_27
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 0
+        width: 98
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6458755ac36ba3560800000000000000
+      internalID: 7294342918068208966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logo-fpt-polytechnic_0: 9128935571069209044
+      logo-fpt-polytechnic_1: 3874859309569048420
+      logo-fpt-polytechnic_10: -6359026870879312072
+      logo-fpt-polytechnic_11: -4226283426536964668
+      logo-fpt-polytechnic_12: -1539448128832371650
+      logo-fpt-polytechnic_13: -1871974556536411777
+      logo-fpt-polytechnic_14: 6536388824514677963
+      logo-fpt-polytechnic_15: -6708641199375138097
+      logo-fpt-polytechnic_16: -3306353343224246199
+      logo-fpt-polytechnic_17: -7671252491010308688
+      logo-fpt-polytechnic_18: 6617354239563690530
+      logo-fpt-polytechnic_19: -6322753782444565824
+      logo-fpt-polytechnic_2: 6919576473741033629
+      logo-fpt-polytechnic_20: -3932347087350011331
+      logo-fpt-polytechnic_21: 1956922267978453577
+      logo-fpt-polytechnic_22: -1550556792122800577
+      logo-fpt-polytechnic_23: 1461818587755514827
+      logo-fpt-polytechnic_24: 6419943401239543461
+      logo-fpt-polytechnic_25: 4366412006970332746
+      logo-fpt-polytechnic_26: 4030120595643013725
+      logo-fpt-polytechnic_27: 7294342918068208966
+      logo-fpt-polytechnic_3: -1066444505149434109
+      logo-fpt-polytechnic_4: -1356938204107659014
+      logo-fpt-polytechnic_5: 4823133532800185135
+      logo-fpt-polytechnic_6: 8999072231185493052
+      logo-fpt-polytechnic_7: -5954346147555800288
+      logo-fpt-polytechnic_8: 5658428503871883413
+      logo-fpt-polytechnic_9: 619264427017729583
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
