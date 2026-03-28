@@ -1287,18 +1287,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 33dbd13f31dd3964ca705a1f9f4febd7, type: 3}
-    m_FontSize: 64
+    m_FontSize: 93
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ch\xFAc m\u1EEBng b\u1EA1n"
+  m_Text: "Ch\xFAc m\u1EEBng b\u1EA1n!"
 --- !u!1 &928073722900593656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,8 +1354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -460}
-  m_SizeDelta: {x: 720, y: 200}
+  m_AnchoredPosition: {x: 0, y: -476}
+  m_SizeDelta: {x: 720, y: 215.5317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1121740378452997748
 GameObject:
@@ -1394,7 +1394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 949.9996}
+  m_AnchoredPosition: {x: 0, y: 949.99805}
   m_SizeDelta: {x: 0, y: -379.9997}
   m_Pivot: {x: 0.5, y: -1.5}
 --- !u!114 &1281695358937317582
@@ -1587,8 +1587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -300}
-  m_SizeDelta: {x: 720, y: 130}
+  m_AnchoredPosition: {x: 0.000015259, y: -297}
+  m_SizeDelta: {x: 785.7837, y: 181.7725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1589230820492233269
 CanvasRenderer:
@@ -3756,18 +3756,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 33dbd13f31dd3964ca705a1f9f4febd7, type: 3}
-    m_FontSize: 52
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 64
-    m_Alignment: 3
+    m_MaxSize: 114
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "B\u1EA1n h\u1EA3y th\xEDch hay kh\xF4ng th\xEDch"
+  m_Text: "B\u1EA1n h\xE3y ch\u1ECDn \nth\xEDch hay kh\xF4ng th\xEDch"
 --- !u!222 &8189350183706468885
 CanvasRenderer:
   m_ObjectHideFlags: 0
