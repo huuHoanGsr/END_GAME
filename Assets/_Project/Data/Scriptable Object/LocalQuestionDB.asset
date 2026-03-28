@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3fb12420cfb4644bee7dc6daf594e4, type: 3}
+  m_Name: LocalQuestionDB
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionDatabaseSO
+  defaultQuestions:
+  - {fileID: 11400000, guid: 1f24ef5f6366e794593cccbe30df6e99, type: 2}
+  - {fileID: 11400000, guid: d123427ec5318dd44b58f834df863954, type: 2}
+  - {fileID: 11400000, guid: 46c623f59de791946b06b4f4b80849bb, type: 2}
+  - {fileID: 11400000, guid: 2835392f34953ae43a91cf051f41ff1a, type: 2}
+  - {fileID: 11400000, guid: 24a2359abc329804a8ca2f446134fadc, type: 2}
+  - {fileID: 11400000, guid: ccd25b865cdea3b48ae177de7ac891fe, type: 2}
+  - {fileID: 11400000, guid: d754abac64e4b5641bf5c001eb04b6a5, type: 2}
+  - {fileID: 11400000, guid: 1031a86d4f521384a81aca379065f3e4, type: 2}
+  - {fileID: 11400000, guid: 40073aaee0a8aeb4abef2b01e32d36ff, type: 2}
+  - {fileID: 11400000, guid: f02b8a392a2b2a647a7f80388250e310, type: 2}
+  - {fileID: 11400000, guid: 2c4420000a2fd1845b5513c40e03e0ae, type: 2}
+  - {fileID: 11400000, guid: d76cf3f8b0f7b824d92dcaeeab1cb95b, type: 2}
+  - {fileID: 11400000, guid: c5219ded3f2f40c4c8c7b62f4fd747f0, type: 2}
+  - {fileID: 11400000, guid: d3cf606e87d863448bbf9f11ed659a8d, type: 2}
+  - {fileID: 11400000, guid: 068c6a368ad5db946b800cb8cd4d6c1c, type: 2}
+  - {fileID: 11400000, guid: 93a17ab5e554dbb4cae54f4eb158b737, type: 2}
+  - {fileID: 11400000, guid: ea46b453f8d4539469724f6e93fad8d6, type: 2}
+  - {fileID: 11400000, guid: 1f023d63cd8b23b4cb2a686f9d87664d, type: 2}
+  - {fileID: 11400000, guid: 7f419f335c2aead45a948c8a588a46ba, type: 2}
+  - {fileID: 11400000, guid: 68e189059eccde648a762c694448c25d, type: 2}

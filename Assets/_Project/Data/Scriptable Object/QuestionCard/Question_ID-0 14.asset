@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
+  m_Name: Question_ID-0 14
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
+  questionText: "Mua \u0111\u1ED3 l\xE0 h\xE3y m\u1EF9 ph\u1EA9m lu\xF4n d\u1EB7n
+    ph\u1EA3i v\u1EEBa \u0111\xFAng th\xE0nh ph\u1EA7n, soi xu\u1EA5t x\u1EE9 c\u1EF1c
+    k\u1EF9 k\u1EF9 t\xEDnh."
+  backgroundImage: {fileID: 21300000, guid: 1b7586fcd63d0e14cb090727aae047ab, type: 3}
+  rightSwipeEffects:
+  - majorID: "D\u01B0\u1EE3c"
+    effectType: 0
+    points: 10
+  - majorID: "Kinh t\u1EBF"
+    effectType: 0
+    points: 5
+  leftSwipeEffects:
+  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
+    effectType: 0
+    points: 5
+  - majorID: "D\u01B0\u1EE3c"
+    effectType: 1
+    points: 5

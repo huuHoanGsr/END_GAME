@@ -9,31 +9,31 @@ public class ResultUIManager : MonoBehaviour
     [SerializeField] private Text categoryNameText;
     [SerializeField] private Text specificMajorsText;
 
-    [Header("Managers")]
-    [SerializeField] private ScoreProfileManager scoreManager; // Kéo script tính điểm vào đây
+    //[Header("Managers")]
+    //[SerializeField] private ScoreProfileManager scoreManager; // Kéo script tính điểm vào đây
 
     private void OnEnable()
     {
         // Lắng nghe sự kiện hết bài từ DeckManager
-        DeckManager.OnDeckEmpty += ShowResult;
+        //DeckManager.OnDeckEmpty += ShowResult;
     }
 
     private void OnDisable()
     {
-        DeckManager.OnDeckEmpty -= ShowResult;
+        //DeckManager.OnDeckEmpty -= ShowResult;
     }
 
     private void ShowResult()
     {
         // 1. Lấy ra khối ngành điểm cao nhất
-        MajorCategory bestCategory = scoreManager.GetBestMatchedMajor();
+        //MajorCategory bestCategory = scoreManager.GetBestMatchedMajor();
 
         // 2. Tắt màn chơi, Bật màn kết quả
         gameplayPanel.SetActive(false);
         resultPanel.SetActive(true);
 
         // 3. Hiển thị thông tin lên UI
-        DisplayCategoryInfo(bestCategory);
+        //DisplayCategoryInfo(bestCategory);
     }
 
     private void DisplayCategoryInfo(MajorCategory category)

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
+  m_Name: Question_ID-0 13
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
+  questionText: "Th\xEDch t\u1EF1 tay mod b\xE0n ph\xEDm c\u01A1, c\xE0i win, d\u1ECDn
+    r\xE1c h\u1ECFng ngh\u1EB9t \u0111\u1EBFn m\u1EE9c c\u1EA3 x\xF3m l\u1EAFp hay
+    nh\u1EDD v\xE1."
+  backgroundImage: {fileID: 21300000, guid: bcc11d1cfdc003b47a87024026f7bfba, type: 3}
+  rightSwipeEffects:
+  - majorID: IT
+    effectType: 0
+    points: 10
+  - majorID: "K\u1EF9 thu\u1EADt"
+    effectType: 0
+    points: 10
+  leftSwipeEffects:
+  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
+    effectType: 0
+    points: 5
+  - majorID: IT
+    effectType: 0
+    points: 5

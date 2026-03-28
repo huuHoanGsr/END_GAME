@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
+  m_Name: Question_ID-0 9
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
+  questionText: "Ch\u01A1i game th\u1EAFng \u0111\xE3 vui, m\xE0 hay soi xem \u0111\u1ED3
+    h\u1ECDa \u0111\u1EB9p kh\xF4ng, nh\xE2n v\u1EADt di chuy\u1EC3n m\u01B0\u1EE3t
+    kh\xF4ng."
+  backgroundImage: {fileID: 21300000, guid: bcc11d1cfdc003b47a87024026f7bfba, type: 3}
+  rightSwipeEffects:
+  - majorID: IT
+    effectType: 0
+    points: 10
+  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
+    effectType: 0
+    points: 5
+  leftSwipeEffects:
+  - majorID: "D\u01B0\u1EE3c"
+    effectType: 0
+    points: 5
+  - majorID: IT
+    effectType: 1
+    points: 5
