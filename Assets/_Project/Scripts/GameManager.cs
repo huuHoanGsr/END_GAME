@@ -37,6 +37,11 @@ public class GameManager : MonoBehaviour
     private List<QuestionCardSO> _runtimeQuestionCards = new List<QuestionCardSO>();
     private int _currentCardIndex;
     private int _totalCardsPlayed;
+    private float _timeLimitSeconds;
+    private float _elapsedSeconds;
+    private int _lastReportedSeconds;
+    private bool _isTimerActive;
+    private bool _hasEnded;
 
     private void OnEnable()
     {
@@ -76,6 +81,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        _hasEnded = false;
+        _elapsedSeconds = 0f;
+        _timeLimitSeconds = GameRules.GetTimeLimitSeconds();
+        _lastReportedSeconds = Mathf.CeilToInt(_timeLimitSeconds);
+        _isTimerActive = true;
+
         foreach (string major in MAIN_MAJORS)
         {
             _scores[major] = 0;
@@ -109,6 +120,7 @@ public class GameManager : MonoBehaviour
         _currentCardIndex = 0;
 
         GameEvents.OnGameplayEntered?.Invoke();
+        GameEvents.OnTimerUpdated?.Invoke(_timeLimitSeconds, _timeLimitSeconds);
         SpawnNextCard();
     }
 
@@ -152,11 +164,17 @@ public class GameManager : MonoBehaviour
     {
         _currentCardIndex = 0;
         _totalCardsPlayed = 0;
+        _isTimerActive = false;
         GameEvents.OnMainMenuEntered?.Invoke();
     }
 
     private void SpawnNextCard()
     {
+        if (_hasEnded)
+        {
+            return;
+        }
+
         if (_currentCardIndex >= deckOfCards.Count)
         {
             EndGame();
@@ -170,6 +188,11 @@ public class GameManager : MonoBehaviour
     // Hàm này gọi khi thẻ bị vuốt
     private void HandleCardSwiped(bool isRightSwipe)
     {
+        if (_hasEnded)
+        {
+            return;
+        }
+
         if (_currentCardIndex >= deckOfCards.Count)
         {
             return;
@@ -209,6 +232,14 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
+        if (_hasEnded)
+        {
+            return;
+        }
+
+        _hasEnded = true;
+        _isTimerActive = false;
+
         if (_scores.Count == 0)
         {
             GameEvents.OnGameEnded?.Invoke(new GameResultData
@@ -243,6 +274,42 @@ public class GameManager : MonoBehaviour
             topMajorPercent = percentTop1,
             topMajorImage = GetMajorImage(top1Major)
         });
+    }
+
+    private void Update()
+    {
+        if (!_isTimerActive || _hasEnded)
+        {
+            return;
+        }
+
+        _elapsedSeconds += Time.deltaTime;
+        float remainingSeconds = Mathf.Max(0f, _timeLimitSeconds - _elapsedSeconds);
+        int remainingWhole = Mathf.CeilToInt(remainingSeconds);
+
+        if (remainingWhole != _lastReportedSeconds)
+        {
+            _lastReportedSeconds = remainingWhole;
+            GameEvents.OnTimerUpdated?.Invoke(remainingSeconds, _timeLimitSeconds);
+        }
+
+        if (remainingSeconds <= 0f)
+        {
+            HandleTimeExpired();
+        }
+    }
+
+    private void HandleTimeExpired()
+    {
+        if (_hasEnded)
+        {
+            return;
+        }
+
+        _hasEnded = true;
+        _isTimerActive = false;
+        GameEvents.OnTimerUpdated?.Invoke(0f, _timeLimitSeconds);
+        GameEvents.OnGameLost?.Invoke();
     }
 
     private void BuildMajorSpriteMap()
