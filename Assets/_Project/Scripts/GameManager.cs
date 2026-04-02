@@ -124,11 +124,6 @@ public class GameManager : MonoBehaviour
         SpawnNextCard();
     }
 
-    public void UseGeminiQuestions(List<QuestionData> generatedQuestions)
-    {
-        SetRuntimeQuestionCards(GeminiQuestionCardAdapter.Convert(generatedQuestions));
-    }
-
     public void SetRuntimeQuestionCards(List<QuestionCardSO> runtimeQuestionCards)
     {
         ClearRuntimeQuestionCards();
@@ -268,12 +263,18 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Phương án dự phòng 1: {sortedScores[1].Key} ({percentTop2}%)");
         Debug.Log($"Phương án dự phòng 2: {sortedScores[2].Key} ({percentTop3}%)");
 
-        GameEvents.OnGameEnded?.Invoke(new GameResultData
+        var resultData = new GameResultData
         {
             topMajorName = top1Major,
             topMajorPercent = percentTop1,
             topMajorImage = GetMajorImage(top1Major)
-        });
+        };
+
+        // Gửi kết quả về server
+        string playerId = SystemInfo.deviceUniqueIdentifier; // Hoặc lấy từ hệ thống đăng nhập nếu có
+        StartCoroutine(ResultSender.SendResultToServer(playerId, resultData));
+
+        GameEvents.OnGameEnded?.Invoke(resultData);
     }
 
     private void Update()

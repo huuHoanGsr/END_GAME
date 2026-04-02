@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text categoryResultText;
     [SerializeField] private Image topMajorImage;
     [SerializeField] private Slider topMajorPercentSlider;
+    [SerializeField] private Text topMajorPercentText; // Thêm dòng này
     [SerializeField] public Button settingButton;
     [Header("Lose UI")]
     [SerializeField] private Text loseMessageText;
@@ -84,6 +85,11 @@ public class UIManager : MonoBehaviour
             topMajorPercentSlider.minValue = 0f;
             topMajorPercentSlider.maxValue = 100f;
             topMajorPercentSlider.value = Mathf.Clamp(result.topMajorPercent, 0, 100);
+        }
+
+        if (topMajorPercentText != null)
+        {
+            topMajorPercentText.text = string.Format("{0:0.##}%", Mathf.Clamp(result.topMajorPercent, 0, 100));
         }
     }
 

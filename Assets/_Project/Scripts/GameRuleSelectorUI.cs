@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameRuleSelectorUI : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private Dropdown modeDropdown;
-    [SerializeField] private Text descriptionText;
+    [SerializeField] private TMP_Dropdown modeDropdown;
+    [SerializeField] private TextMeshProUGUI descriptionText;
 
     private void Awake()
     {
         if (modeDropdown == null)
         {
-            modeDropdown = GetComponentInChildren<Dropdown>();
+            modeDropdown = GetComponentInChildren<TMP_Dropdown>();
         }
 
         if (modeDropdown != null)
