@@ -33,6 +33,14 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     [Header("Card UI")]
     [SerializeField] private Text questionText;
     [SerializeField] private Image backgroundImage;
+    [Header("Answer Feedback")]
+    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioClip correctSfx;
+    [SerializeField] private AudioClip wrongSfx;
+    [SerializeField] private Image screenBorderImage;
+    [SerializeField] private float borderFlashDuration = 0.2f;
+    [SerializeField] private Color correctBorderColor = new Color(0.2f, 0.9f, 0.3f, 1f);
+    [SerializeField] private Color wrongBorderColor = new Color(0.95f, 0.2f, 0.2f, 1f);
 
     [Header("Image Fallback")]
     [SerializeField] private bool useLocalFallbackWhenRemoteFails = true;
@@ -46,6 +54,7 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private Coroutine _activeAnimation;
     private Coroutine _likePopCoroutine;
     private Coroutine _skipPopCoroutine;
+    private Coroutine _borderFlashCoroutine;
     private bool _isAnimating;
     private bool _likeThresholdTriggered;
     private bool _skipThresholdTriggered;
@@ -53,6 +62,7 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private Vector3 _skipBaseScale;
     private Coroutine _loadImageCoroutine;
     private string _activeImageUrl;
+    private QuestionCardSO _cardData;
 
     private void Awake()
     {
@@ -60,6 +70,7 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         CacheHintReferences();
         ResetStampVisuals();
         SetHintAlpha(0f, 0f);
+        EnsureFeedbackComponents();
     }
 
     public void ConfigureSwipeFeedback(
@@ -84,6 +95,8 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         {
             return;
         }
+
+        _cardData = cardData;
 
         if (questionText != null)
         {
@@ -372,7 +385,49 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
             StopCoroutine(_activeAnimation);
         }
 
+        PlayAnswerFeedback(isRight);
+
         _activeAnimation = StartCoroutine(AnimateSwipeOut(isRight));
+    }
+
+    private void PlayAnswerFeedback(bool isRight)
+    {
+        bool isCorrect = IsSwipeCorrect(isRight);
+
+        FlashScreenBorder(isCorrect ? correctBorderColor : wrongBorderColor);
+
+        if (sfxSource == null)
+        {
+            return;
+        }
+
+        AudioClip clip = isCorrect ? correctSfx : wrongSfx;
+        if (clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
+    }
+
+    private bool IsSwipeCorrect(bool isRight)
+    {
+        if (_cardData == null)
+        {
+            return true;
+        }
+
+        List<SwipeEffect> effects = isRight ? _cardData.rightSwipeEffects : _cardData.leftSwipeEffects;
+        if (effects == null || effects.Count == 0)
+        {
+            return false;
+        }
+
+        int delta = 0;
+        for (int i = 0; i < effects.Count; i++)
+        {
+            delta += effects[i].GetSignedPoints();
+        }
+
+        return delta > 0;
     }
 
     private void ResetCard()
@@ -393,11 +448,12 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         Quaternion fromRotation = _rectTransform.localRotation;
         Quaternion toRotation = Quaternion.identity;
         float elapsed = 0f;
+        float adjustedResetDuration = GetAdjustedDuration(resetDuration);
 
-        while (elapsed < resetDuration)
+        while (elapsed < adjustedResetDuration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / resetDuration);
+            float t = Mathf.Clamp01(elapsed / adjustedResetDuration);
             float eased = EaseOutCubic(t);
 
             _rectTransform.anchoredPosition = Vector2.LerpUnclamped(fromPosition, _startPosition, eased);
@@ -432,11 +488,12 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         Quaternion fromRotation = _rectTransform.localRotation;
         Quaternion toRotation = Quaternion.Euler(0f, 0f, targetZRotation);
         float elapsed = 0f;
+        float adjustedSwipeOutDuration = GetAdjustedDuration(swipeOutDuration);
 
-        while (elapsed < swipeOutDuration)
+        while (elapsed < adjustedSwipeOutDuration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / swipeOutDuration);
+            float t = Mathf.Clamp01(elapsed / adjustedSwipeOutDuration);
             float eased = EaseInCubic(t);
 
             _rectTransform.anchoredPosition = Vector2.LerpUnclamped(fromPosition, toPosition, eased);
@@ -494,6 +551,94 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         _skipBaseScale = skipStampTransform != null ? skipStampTransform.localScale : Vector3.one;
     }
 
+    private void EnsureFeedbackComponents()
+    {
+        if (sfxSource == null)
+        {
+            sfxSource = GetComponent<AudioSource>();
+            if (sfxSource == null)
+            {
+                sfxSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+
+        EnsureScreenBorder();
+    }
+
+    private void EnsureScreenBorder()
+    {
+        if (screenBorderImage != null)
+        {
+            return;
+        }
+
+        Canvas rootCanvas = GetComponentInParent<Canvas>();
+        if (rootCanvas == null)
+        {
+            return;
+        }
+
+        GameObject borderRoot = new GameObject("AnswerScreenBorder", typeof(RectTransform), typeof(Image), typeof(Outline));
+        borderRoot.transform.SetParent(rootCanvas.transform, false);
+        borderRoot.transform.SetAsLastSibling();
+
+        RectTransform rect = borderRoot.GetComponent<RectTransform>();
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+
+        Image image = borderRoot.GetComponent<Image>();
+        image.color = new Color(0f, 0f, 0f, 0f);
+        image.raycastTarget = false;
+
+        Outline outline = borderRoot.GetComponent<Outline>();
+        outline.effectDistance = new Vector2(8f, 8f);
+        outline.enabled = false;
+
+        screenBorderImage = image;
+    }
+
+    private void FlashScreenBorder(Color color)
+    {
+        if (screenBorderImage == null)
+        {
+            return;
+        }
+
+        Outline outline = screenBorderImage.GetComponent<Outline>();
+        if (outline == null)
+        {
+            return;
+        }
+
+        outline.effectColor = color;
+        outline.enabled = true;
+
+        if (_borderFlashCoroutine != null)
+        {
+            StopCoroutine(_borderFlashCoroutine);
+        }
+
+        _borderFlashCoroutine = StartCoroutine(HideScreenBorderAfterDelay());
+    }
+
+    private IEnumerator HideScreenBorderAfterDelay()
+    {
+        yield return new WaitForSeconds(GetAdjustedDuration(Mathf.Max(0.05f, borderFlashDuration)));
+
+        if (screenBorderImage != null)
+        {
+            Outline outline = screenBorderImage.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
+        }
+
+        _borderFlashCoroutine = null;
+    }
+
     private void PlayStampPop(bool isLikeStamp)
     {
         if (isLikeStamp)
@@ -527,7 +672,7 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     private IEnumerator AnimateStampPop(RectTransform target, Vector3 baseScale, bool isLikeStamp)
     {
-        float duration = Mathf.Max(0.01f, stampPopDuration);
+        float duration = GetAdjustedDuration(Mathf.Max(0.01f, stampPopDuration));
         float elapsed = 0f;
         Vector3 peakScale = baseScale * Mathf.Max(1f, stampPopScale);
 
@@ -597,5 +742,11 @@ public class SwipeCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private float EaseInCubic(float t)
     {
         return t * t * t;
+    }
+
+    private float GetAdjustedDuration(float baseDuration)
+    {
+        float speedMultiplier = Mathf.Max(0.1f, GameRules.SwipeAnimationSpeedMultiplier);
+        return Mathf.Max(0.01f, baseDuration / speedMultiplier);
     }
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
+  m_Name: Question_TF_032
+  m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
+  questionText: "Ng\xE0nh Marketing ch\u1EC9 d\u1EA1y v\u1EC1 b\xE1n h\xE0ng tr\u1EF1c
+    ti\u1EBFp?"
+  backgroundImage: {fileID: -8875060625990170833, guid: 2aca66c1080abe545b00b84f71afb56c, type: 3}
+  backgroundImageUrl: 
+  rightSwipeEffects:
+  - majorID: IT
+    effectType: 1
+    points: 1
+  leftSwipeEffects:
+  - majorID: IT
+    effectType: 0
+    points: 1

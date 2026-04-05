@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
   m_Name: Question_ID-0
   m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
-  questionText: "L\u01B0\u1EDBt Facebook/Tiktok th\u1EA5y banner hay video ch\u1ED1t
-    phi\xEAn l\xE0 ng\u1EE9a m\u1EAFt, mu\u1ED1n b\u1EBB ngay v\xE0o app ch\xEDnh
-    l\xE0 gi\xE0nh c\xF4ng lu\xF4n."
-  backgroundImage: {fileID: 21300000, guid: b7dc0a9103d65db48a46db87cfdfb156, type: 3}
+  questionText: "FPT Polytechnic thành lập vào năm 2010?"
+  backgroundImage: {fileID: -4814182474967226119, guid: abeb30c71d59d7548833dc26f398ffd2, type: 3}
   rightSwipeEffects:
-  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
-    effectType: 0
-    points: 10
   - majorID: IT
     effectType: 0
-    points: 5
+    points: 1
   leftSwipeEffects:
-  - majorID: "Kinh t\u1EBF"
+  - majorID: IT
     effectType: 1
-    points: 5
-  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
-    effectType: 0
-    points: 5
+    points: 1
