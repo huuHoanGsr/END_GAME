@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
   m_Name: Question_ID-0 2
   m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
-  questionText: "C\xE0y phim kh\xF4ng th\xE8m nh\xECn subtitle, l\u1EE1 l\u1EDDi
-    m\u1EDBi l\xE0 c\xE1i duy\xEAn, s\u1EB5n ti\u1EC7n d\u1ECBch lu\xF4n lyrics cho
-    h\u1ED9i ch\u1ECB em."
-  backgroundImage: {fileID: 21300000, guid: dea08833991e25147b0a10589037bbe6, type: 3}
+  questionText: "Màu sắc chủ đạo của logo trường là màu Tím?"
+  backgroundImage: {fileID: 1444311790211900171, guid: d0abb3cf568fc3e4ea00393065a064e8, type: 3}
   rightSwipeEffects:
-  - majorID: "Ng\xF4n ng\u1EEF"
-    effectType: 0
-    points: 10
-  - majorID: "Du l\u1ECBch - Kh\xE1ch s\u1EA1n"
-    effectType: 0
-    points: 5
-  leftSwipeEffects:
-  - majorID: "K\u1EF9 thu\u1EADt"
+  - majorID: IT
     effectType: 1
-    points: 5
-  - majorID: "Ng\xF4n ng\u1EEF"
+    points: 1
+  leftSwipeEffects:
+  - majorID: IT
     effectType: 0
-    points: 5
+    points: 1

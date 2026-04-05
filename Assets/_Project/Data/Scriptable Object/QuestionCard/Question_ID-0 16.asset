@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
   m_Name: Question_ID-0 16
   m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
-  questionText: "L\xE0m g\xEC c\u0169ng c\xF3 quy tr\xECnh, k\u1EF7 lu\u1EADt th\xE9p,
-    c\u1EF1c k\u1EF3 gh\xE9t s\u1EF1 h\u1EDDi h\u1EE3t ho\u1EB7c l\xE0m cho c\xF3
-    l\u1EC7."
-  backgroundImage: {fileID: 21300000, guid: 879fceb7770873341ae8e3bb1732da2e, type: 3}
+  questionText: "Website chính thức của trường là fpt.edu.vn?"
+  backgroundImage: {fileID: -8875060625990170833, guid: 2aca66c1080abe545b00b84f71afb56c, type: 3}
   rightSwipeEffects:
-  - majorID: "K\u1EF9 thu\u1EADt"
-    effectType: 0
-    points: 10
-  - majorID: "D\u01B0\u1EE3c"
-    effectType: 0
-    points: 10
+  - majorID: IT
+    effectType: 1
+    points: 1
   leftSwipeEffects:
-  - majorID: "Kinh t\u1EBF"
+  - majorID: IT
     effectType: 0
-    points: 5
-  - majorID: "Thi\u1EBFt k\u1EBF \u0111\u1ED3 h\u1ECDa"
-    effectType: 0
-    points: 5
+    points: 1

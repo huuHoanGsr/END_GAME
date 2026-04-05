@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
   m_Name: Question_ID-0 4
   m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
-  questionText: "S\u1EBFp nh\u1EDD l\u1EAFp nh\u1EA1c n\u1EC1n m\u1ED9t ch\xFAt l\xE0
-    ch\u1EC9nh/ngh\u1ECBch, c\xE0i n\xE9t hay, th\xEDch bay nh\u1EA3y v\xE0 g\u1EB7p
-    g\u1EE1 ng\u01B0\u1EDDi m\u1EDBi."
-  backgroundImage: {fileID: 21300000, guid: 8e950a0c313c2a446a8258a3da177b27, type: 3}
+  questionText: "Tên viết tắt chính thức của trường là FPL?"
+  backgroundImage: {fileID: -810411270842995588, guid: 8d2eee0970cf3e744818ba5745007d9d, type: 3}
   rightSwipeEffects:
-  - majorID: "Du l\u1ECBch - Kh\xE1ch s\u1EA1n"
-    effectType: 0
-    points: 10
-  - majorID: "Kinh t\u1EBF"
-    effectType: 0
-    points: 5
-  leftSwipeEffects:
   - majorID: IT
     effectType: 0
-    points: 10
-  - majorID: "D\u01B0\u1EE3c"
+    points: 1
+  leftSwipeEffects:
+  - majorID: IT
     effectType: 1
-    points: 5
+    points: 1

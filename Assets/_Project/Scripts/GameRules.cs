@@ -13,12 +13,19 @@ public static class GameRules
     public const float TimeLimit5Seconds = 300f;
 
     private static GameRuleMode _selectedMode = GameRuleMode.TimeLimit5Min;
+    private static float _swipeAnimationSpeedMultiplier = 1f;
 
     public static GameRuleMode SelectedMode => _selectedMode;
+    public static float SwipeAnimationSpeedMultiplier => _swipeAnimationSpeedMultiplier;
 
     public static void SetMode(GameRuleMode mode)
     {
         _selectedMode = mode;
+    }
+
+    public static void SetSwipeAnimationSpeedMultiplier(float multiplier)
+    {
+        _swipeAnimationSpeedMultiplier = Mathf.Max(0.1f, multiplier);
     }
 
     public static float GetTimeLimitSeconds()

@@ -2,23 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameRuleSelectorUI : MonoBehaviour
+public class MinigameModeSelectorUI : MonoBehaviour
 {
+    [Header("BG Panel")]
+    [SerializeField] private GameObject bgPanel;
+
     [Header("UI")]
     [SerializeField] private TMP_Dropdown modeDropdown;
-    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private Text descriptionText;
 
     private void Awake()
     {
         if (modeDropdown == null)
-        {
             modeDropdown = GetComponentInChildren<TMP_Dropdown>();
-        }
 
         if (modeDropdown != null)
         {
-            modeDropdown.onValueChanged.RemoveListener(HandleModeChanged);
-            modeDropdown.onValueChanged.AddListener(HandleModeChanged);
+            modeDropdown.onValueChanged.RemoveListener(OnDropdownChanged);
+            modeDropdown.onValueChanged.AddListener(OnDropdownChanged);
             ApplyFromDropdown();
         }
     }
@@ -26,58 +27,80 @@ public class GameRuleSelectorUI : MonoBehaviour
     private void OnDestroy()
     {
         if (modeDropdown != null)
+            modeDropdown.onValueChanged.RemoveListener(OnDropdownChanged);
+    }
+
+    private void OnDropdownChanged(int index)
+    {
+        ApplySelectedMode(index);
+        UpdateDescription();
+    }
+
+    public void ApplyFromDropdown()
+    {
+        if (modeDropdown != null)
         {
-            modeDropdown.onValueChanged.RemoveListener(HandleModeChanged);
+            ApplySelectedMode(modeDropdown.value);
+        }
+
+        UpdateDescription();
+    }
+
+    public void StartGameWithSelectedMode()
+    {
+        if (modeDropdown != null)
+        {
+            ApplySelectedMode(modeDropdown.value);
+        }
+
+        if (bgPanel != null)
+        {
+            bgPanel.SetActive(false);
+        }
+
+        GameEvents.OnRestartRequested?.Invoke();
+    }
+
+    private void UpdateDescription()
+    {
+        if (descriptionText == null) return;
+
+        switch (GameRules.SelectedMode)
+        {
+            case GameRuleMode.TimeLimit3Min:
+                descriptionText.text = "3 phút: số câu ít hơn, nhịp nhanh.";
+                break;
+            case GameRuleMode.TimeLimit5Min:
+                descriptionText.text = "5 phút: chế độ tiêu chuẩn, cân bằng nhất.";
+                break;
+            case GameRuleMode.SpeedRunMax5Min:
+                descriptionText.text = "Speed Run: tối đa số câu trong 5 phút.";
+                break;
+            default:
+                descriptionText.text = "Chọn chế độ trước khi bắt đầu.";
+                break;
         }
     }
 
-    private void HandleModeChanged(int index)
+    private void ApplySelectedMode(int index)
     {
-        GameRuleMode mode = IndexToMode(index);
-        GameRules.SetMode(mode);
-        UpdateDescription(mode);
-    }
-
-    private void ApplyFromDropdown()
-    {
-        GameRuleMode mode = IndexToMode(modeDropdown.value);
-        GameRules.SetMode(mode);
-        UpdateDescription(mode);
-    }
-
-    private GameRuleMode IndexToMode(int index)
-    {
+        GameRuleMode mode;
         switch (index)
         {
             case 0:
-                return GameRuleMode.TimeLimit3Min;
+                mode = GameRuleMode.TimeLimit3Min;
+                break;
             case 1:
-                return GameRuleMode.TimeLimit5Min;
+                mode = GameRuleMode.TimeLimit5Min;
+                break;
             case 2:
+                mode = GameRuleMode.SpeedRunMax5Min;
+                break;
             default:
-                return GameRuleMode.SpeedRunMax5Min;
-        }
-    }
-
-    private void UpdateDescription(GameRuleMode mode)
-    {
-        if (descriptionText == null)
-        {
-            return;
+                mode = GameRuleMode.TimeLimit5Min;
+                break;
         }
 
-        switch (mode)
-        {
-            case GameRuleMode.TimeLimit3Min:
-                descriptionText.text = "Gioi han 3 phut. Het gio se thua.";
-                break;
-            case GameRuleMode.TimeLimit5Min:
-                descriptionText.text = "Gioi han 5 phut. Het gio se thua.";
-                break;
-            case GameRuleMode.SpeedRunMax5Min:
-            default:
-                descriptionText.text = "Hoan thanh nhanh nhat, toi da 5 phut.";
-                break;
-        }
+        GameRules.SetMode(mode);
     }
 }

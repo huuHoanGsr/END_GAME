@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e15a4e421a00488fbb184ca97bbaf, type: 3}
   m_Name: Question_ID-0 17
   m_EditorClassIdentifier: Assembly-CSharp::QuestionCardSO
-  questionText: "B\u1EA1n l\xE0 t\u1ED5ng \u0111\xE0i g\u1EE1 r\u1ED1i t\u01A1 l\xF2ng
-    c\u1EE7a l\u0169 b\u1EA1n, chuy\u1EC7n g\xEC b\u1EBF t\u1EAFc nh\u1EAFn t\xEAn
-    l\xE0 d\xE1m d\u1EA5n vui anh."
-  backgroundImage: {fileID: 21300000, guid: 8e950a0c313c2a446a8258a3da177b27, type: 3}
+  questionText: "Trường có đào tạo khối ngành Chăm sóc sức khỏe & Làm đẹp?"
+  backgroundImage: {fileID: -8875060625990170833, guid: 2aca66c1080abe545b00b84f71afb56c, type: 3}
   rightSwipeEffects:
-  - majorID: "Du l\u1ECBch - Kh\xE1ch s\u1EA1n"
-    effectType: 0
-    points: 10
-  - majorID: "Kinh t\u1EBF"
-    effectType: 0
-    points: 5
-  leftSwipeEffects:
   - majorID: IT
     effectType: 0
-    points: 5
-  - majorID: "Du l\u1ECBch - Kh\xE1ch s\u1EA1n"
-    effectType: 0
-    points: 5
+    points: 1
+  leftSwipeEffects:
+  - majorID: IT
+    effectType: 1
+    points: 1
